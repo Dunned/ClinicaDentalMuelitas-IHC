@@ -12,18 +12,110 @@
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/fontawesome-all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
-  <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
+  <header class="site-header">
+      <div class="hero">
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div class="contenido-header">
+          <nav class="redes-sociales">
+            <a href="#"> <i class="fab fa-facebook-f"></i></a>
+            <a href="#"> <i class="fab fa-twitter"></i></a>
+            <a href="#"> <i class="fab fa-pinterest-p"></i></a>
+            <a href="#"> <i class="fab fa-youtube"></i></a>
+            <a href="#"> <i class="fab fa-instagram"></i></a>
+          </nav>
+          <div class="informacion-evento">
+            <div class="clearfix">
+              <p class="ciudad"><i class="fas fa-map-marker-alt"></i> Lima-Chaclacayo</p>
+            </div>
+            <h1 class="nombre-sitio">Clinica Dental Muelitas</h1>
+            <p class="slogan">Tu sonrisa nos<br>importa</p>
+          </div>
+          
+        </div>
+      </div>
+  </header>
+
+  <div class="barra">
+    <div class="contenedor clearfix">
+      <div class="logo">
+        <a href="/"><img src="img/logo.svg" alt="logo"></a>
+      </div>
+
+      <div class="menu-movil">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="navegacion-principal">
+          <a href="#">Nosotros</a>
+          <a href="#">Servicios</a>
+          <a href="#">Nuestros Doctores</a>
+          <a href="#">Reservaciones</a>
+      </nav>
+    </div>
+  </div> <!--CIERRE DE BARRA-->
+  
+  <section class="seccion contenedor">
+    <h2>Clinica reconocida ampliamente</h2>
+    <p>¿Qué te trajo hasta nosotros? <br>
+      Si la respuesta es por que no te gusta la idea de perder tus dientes, ni perder tu linda sonrisa; Sino mantener <br> un aliento limpio y fresco. Queremos decirte, que has llegado al lugar correcto. <br>
+      Desde la primera cita podrás notar la diferencia de un antes y un después. Para lograr que tus dientes estén <br> fuertes y sanos necesitamos mejorar el ambiente de tu boca.</p>
+  </section> <!--fin seccion-->
+
+  
+  <section class="programa">
+
+    <div class="contenedor-video">
+      <img src="/img/fondoInicio2.png" alt="fondoInicio2">
+    </div>
+    <div class="contenido-programa">
+      <div class="contenedor">
+        <div class="programa-evento">
+
+          <h2>Algunas Especialidades</h2>
+
+          <nav class="menu-programa">
+            <a href="#Especialidad1"><i class="fas fa-stethoscope"></i> Especialidad 2</a>
+            <a href="#Especialidad2"><i class="fas fa-book"></i> Especialidad 2</a>
+            <a href="#Especialidad3"><i class="fas fa-notes-medical"></i> Especialidad 3</a>
+          </nav>
+
+          <div id="Especialidad1" class="info-especialidad ocultar clearfix"> 
+            <div class="detalle-evento">
+              <h3>Servicio de Blanqueo</h3>
+              <p><i class="fas fa-hourglass-start"></i> 30-45 min</p>
+              <p><i class="fas fa-level-up-alt"></i> Alta</p>
+              <p><i class="fas fa-user-md"></i> Eduardo Jauregui Romero</p>
+            </div>
+            <div class="detalle-evento">
+              <h3>Servicio de Ortodoncia</h3>
+              <p><i class="fas fa-hourglass-start"></i> 60-75 min</p>
+              <p><i class="fas fa-level-up-alt"></i> Alta</p>
+              <p><i class="fas fa-user-md"></i> Eduardo Jauregui Romero</p>
+            </div>
+            <a href="" class="button float-right">Ver Todos</a>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+
+
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
