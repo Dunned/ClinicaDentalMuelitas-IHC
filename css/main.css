@@ -101,9 +101,18 @@ textarea {
   margin: 0 auto;
 }
 
+
 .seccion{
   padding: 3rem 0;
 }
+
+@media (min-width: 768px) {
+    .contenedor-centrar{
+      margin: 0 14rem;
+    }
+}
+
+
 .seccion p{
   font-size: 2rem;
   text-align: center;
@@ -140,6 +149,17 @@ li,ul{
   display: inline-block;
   margin-top: 2rem;
   transition: all 0.3s ease-out;
+}
+
+.button.transparente{
+  background-color: transparent;
+  color: var(--colorAmarillo);
+  border-color: var(--colorAmarillo);
+  border: 5px solid var(--colorAmarillo);
+}
+
+.button.transparente:hover{
+  background-color: var(--colorAmarillo);
 }
 
 .button:hover{
@@ -825,6 +845,72 @@ footer.info-testimonial img{
   border: 0px solid #000000;
   border: 0px solid #000000;
   margin-left: .5rem;
+}
+
+
+/*Newsletter*/
+div.newsletter{
+  position: relative;
+  height: auto;
+}
+
+div.newsletter::before{
+  background-image: url(../img/newsletter.png);
+  content: '';
+  
+}
+
+div.newsletter .contenido{
+  padding: 10rem 0;
+  color: var(--colorBlanco);
+  text-align: center;
+  position: relative;
+}
+
+div.newsletter .contenido p{
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--colorVerde);
+  margin-bottom: 1rem;
+}
+
+div.newsletter .contenido h3{
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--colorBlanco);
+}
+
+/*CuentaRegresiva*/
+
+.cuenta-regresiva ul{
+  margin: 3rem 0;
+}
+
+.cuenta-regresiva ul li{
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding: 1rem;
+
+}
+
+.cuenta-regresiva ul li p{
+  margin: 0;
+  padding: 0;
+  line-height: 0.9;
+}
+
+@media (min-width: 768px) {
+  .cuenta-regresiva ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  }
+
+  .cuenta-regresiva ul li{
+    margin: 0;
+    padding: 0;
+  }
 }
 
 
