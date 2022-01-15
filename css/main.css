@@ -5,6 +5,7 @@
   --colorNegro: #000;
   --colorGris: rgb(54, 51, 51);
   --colorFooter: #494545;
+  --colorNaranja: #F37945;
   --fuente: 'Roboto', sans-serif;
 
 }
@@ -1003,6 +1004,190 @@ p.derechos{
   font-size: 1.5rem;
   color: var(--colorBlanco);
 }
+
+
+
+
+/*Reservaciones*/
+
+
+
+
+/*ListadoHoraraios*/
+
+
+fieldset.contenedorDia{
+  border: 1px solid var(--colorNegro);
+  margin: 3rem 0 10rem 0rem;
+}
+
+.tituloHorario{
+  font-size: 5rem;
+  text-align: center;
+  padding: 2rem 0 0rem 0;
+  text-transform: uppercase;
+}
+
+h4.tituloDia{
+  margin: 4rem 0 2rem 0;
+  font-size: 4rem;
+  text-align: center;
+  position: relative;
+  letter-spacing: 5px;
+}
+
+h4.tituloDia::before{
+  position: absolute;
+  content: '';
+  background-color: var(--colorAmarillo);
+  height: 5px;
+  width: 100%;
+  left: 0;
+  bottom: -14px;
+}
+
+div.contenedorDoctor{
+  margin: 3rem;
+  display: flex;
+  gap: 2rem;
+  background-color: rgba(255,205,25,0.1);
+  border-radius: 5px;
+  position: relative;
+  padding: 1rem;
+}
+
+div.contenedorDoctor:hover{
+  background-color: rgba(255,205,25,0.4)
+}
+
+@media (min-width: 768px) {
+    div.contenedorDoctor{
+        flex-direction: column;
+        gap: 0.3rem;
+        align-items: center;
+    }
+
+    fieldset.contenedorDia{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 0.5rem;
+    }
+
+   
+    .contenedorInputHora label{
+      margin: 0 !important;
+    }
+}
+
+
+
+.contenedorInputHora{
+  color: var(--colorVerde);
+  font-size: 3rem;
+  font-weight: bold;
+  width: 50%;
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contenedorInputHora label{
+  display: block;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+
+.nombreDoctor{
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--colorNaranja);
+  margin: auto auto;
+  cursor: pointer;
+}
+
+input[type=radio] {
+  cursor: pointer;
+  border: 0px;
+  width: 4rem;
+  height: 4rem;
+  margin-right: 10px;
+  background-color: var(--colorAmarillo);
+}
+
+
+
+/*Pagos y Extyas*/
+.resumen h3{
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.caja{
+  border: 1px solid var(--colorNegro);
+}
+
+div.extras{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+div.extras div{
+  padding: 2rem 0;
+}
+
+div.extras div label{
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin: 2rem;
+  display: block;
+}
+
+div.extras div input{
+  height: 5rem;
+  margin: auto 0;
+}
+
+div.extras div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+div.extras input[type="button"]{
+  display: inline-block;
+  margin-bottom: 5rem;
+  padding: 2rem 7rem;
+  font-size: 3.5rem;
+}
+
+div.total{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.total p{
+  font-size: 5rem;
+}
+
+.total input{
+  font-size: 3.5rem;
+  padding: 2rem 7rem
+}
+
+@media (min-width: 768px) {
+    div.caja{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 2rem;
+    }  
+}
+
 
 
 
