@@ -9,20 +9,20 @@ const precioCuidado=20;
 (function(){ //SOLO SE EJECUTE UNA VEZ
     'use strict';
     document.addEventListener('DOMContentLoaded',function(){
-    console.log('Listo');
-    }); //DOM CONTENT LOADES
 
-
-    var map = L.map('mapa').setView([-12.083759, -77.061169], 16);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-    L.marker([-12.083759, -77.061169]).addTo(map)
-    .bindPopup('CLINICA DENTAL MUELITAS.<br> La mejor Sonrisa')
-    .openPopup();
-    //.bindTooltip('Un tootltip')
-    //.openTooltip();
-
+    var mapa = document.querySelector('#mapa');
+    if(mapa) {
+        var map = L.map('mapa').setView([-12.083759, -77.061169], 16);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        L.marker([-12.083759, -77.061169]).addTo(map)
+        .bindPopup('CLINICA DENTAL MUELITAS.<br> La mejor Sonrisa')
+        .openPopup();
+        //.bindTooltip('Un tootltip')
+        //.openTooltip();
+    }
+        
     //CAMPOS DATOS DEL USUARIO
     const nombre=document.getElementById('nombre');
     const apellido=document.getElementById('apellido');
@@ -52,7 +52,6 @@ const precioCuidado=20;
     online.addEventListener('click',seleccionOnline);
     presencial.addEventListener('click',seleccionPresencial);
     calcular.addEventListener('click',calcularMontos);
-
 
     nombre.addEventListener("blur",validarCampos);
     apellido.addEventListener("blur",validarCampos);
@@ -178,6 +177,8 @@ const precioCuidado=20;
             element.classList.add("ocultar");
         });
     }
+
+    }); //DOM CONTENT LOADES
 
 })()
 
