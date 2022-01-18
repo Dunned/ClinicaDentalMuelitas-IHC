@@ -16,15 +16,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
-  <!--MAPA-->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" 
+
+  <link rel="stylesheet" href="css/lightbox.css">
+
+  <?php
+    $archivo=basename($_SERVER['PHP_SELF']);
+    $pagina=str_replace('.php','',$archivo);
+    if ($pagina=='dentistas' || $pagina=='index') {
+      echo '<link rel="stylesheet" href="css/colorbox.css">';
+    }else if ($pagina=='nosotros') {
+      echo '<link rel="stylesheet" href="css/lightbox.css">';
+    }
+  ?>
+  
+   <!--MAPA-->
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" 
   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
   <!--FIN MAPA-->
   <meta name="theme-color" content="#fafafa">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body class="<?php echo $pagina; ?>">
   <header class="site-header">
       <div class="hero">
 
@@ -60,9 +73,9 @@
         <span></span>
       </div>
       <nav class="navegacion-principal">
-          <a href="#">Nosotros</a>
-          <a href="/servicios.php">Servicios</a>
-          <a href="#">Nuestros Doctores</a>
+          <a href="/nosotros.php" class="menu-nosotros">Nosotros</a>
+          <a href="/servicios.php" class="menu-servicios">Servicios</a>
+          <a href="/dentistas.php" class="menu-dentistas">Nuestros Doctores</a>
           <a href="reservaciones.php">Reservaciones</a>
       </nav>
     </div>

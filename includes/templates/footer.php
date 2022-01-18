@@ -46,6 +46,15 @@
   <!--MAPA-->
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
   <!--FIN MAPA-->
+  <?php
+    $archivo=basename($_SERVER['PHP_SELF']);
+    $pagina=str_replace('.php','',$archivo);
+    if ($pagina=='dentistas' || $pagina=='index') {
+      echo '<script src="/js/jquery.colorbox-min.js"></script>';
+    }else if ($pagina=='nosotros') {
+      echo '<script src="/js/lightbox.js"></script>';
+    }
+  ?>
   <script src="/js/main.js"></script>
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>

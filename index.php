@@ -43,55 +43,8 @@
     </div> <!--CONTENIDO DEL PROGRAMA-->
   </section> <!--PROGRAMA-->
 
-  <section class="doctores contenedor seccion">
-    <h2>Nuestros Profesionales</h2>
-    <ul class="lista-doctores">
-
-      <li>
-        <div class="doctor">
-            <img src="img/fotoDoctor.png" alt="FotoDoctor">
-            <p>William Cachique</p>
-        </div>
-      </li>
-
-      <li>
-        <div class="doctor">
-            <img src="img/fotoDoctor.png" alt="FotoDoctor">
-            <p>William Cachique</p>
-        </div>
-      </li>
-
-      <li>
-        <div class="doctor">
-            <img src="img/fotoDoctor.png" alt="FotoDoctor">
-            <p>William Cachique</p>
-        </div>
-      </li>
-
-      <li>
-        <div class="doctor">
-            <img src="img/fotoDoctor.png" alt="FotoDoctor">
-            <p>William Cachique</p>
-        </div>
-      </li>
-
-      <li>
-        <div class="doctor">
-            <img src="img/fotoDoctor.png" alt="FotoDoctor">
-            <p>William Cachique</p>
-        </div>
-      </li>
-
-      <li>
-        <div class="doctor">
-            <img src="img/fotoDoctor.png" alt="FotoDoctor">
-            <p>William Cachique</p>
-        </div>
-      </li>
-
-    </ul>
-  </section>
-
+  <?php include 'includes/templates/dentistas.php'; ?>
+  
   <!--CONTADOR-->
   <div class="contador parallax">
     <div class="contenedor">

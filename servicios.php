@@ -6,7 +6,7 @@
         <?php
         try {
             require 'includes/funciones/bd_conexion.php';
-            $sql="SELECT servicios.id_servicio,servicios.nombre_servicio,servicios.complejidad_servicio,servicios.tipo_servicio,servicios.tiempo_especialidad,dentista.nombre_dentista,dentista.nombre_dentista,dentista.apellido_dentista,especialidades.nombre_especialidad,especialidades.icono_especialidad FROM servicios INNER JOIN dentista ON servicios.dentista_asignado=dentista.id_dentista INNER JOIN especialidades ON servicios.id_especialidad=especialidades.id_especialidad";
+            $sql="SELECT servicios.id_servicio,servicios.nombre_servicio,servicios.complejidad_servicio,servicios.tipo_servicio,servicios.tiempo_especialidad,dentistas.nombre_dentista,dentistas.nombre_dentista,dentistas.apellido_dentista,especialidades.nombre_especialidad,especialidades.icono_especialidad FROM servicios INNER JOIN dentistas ON servicios.dentista_asignado=dentistas.id_dentista INNER JOIN especialidades ON servicios.id_especialidad=especialidades.id_especialidad";
             $resultado=$conn->query($sql);
         } catch (\Exception $e) {
             echo $e->getMessage();

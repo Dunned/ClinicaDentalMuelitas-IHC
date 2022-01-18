@@ -6,10 +6,18 @@ const precioPresencial=50;
 const precioBlanqueamiento=50;
 const precioCuidado=20;
 
+//PINTAR
+var rutaAbsoluta = self.location.href;   
+var posicionUltimaBarra = rutaAbsoluta.lastIndexOf("/");
+var rutaRelativa = rutaAbsoluta.substring( posicionUltimaBarra + "/".length , rutaAbsoluta.length );
+rutaRelativa=rutaRelativa.replace('.php','');
+//
+const resaltar=document.querySelector('.'+rutaRelativa).querySelector('.menu-'+rutaRelativa);
+
+
 (function(){ //SOLO SE EJECUTE UNA VEZ
     'use strict';
     document.addEventListener('DOMContentLoaded',function(){
-
     var mapa = document.querySelector('#mapa');
     if(mapa) {
         var map = L.map('mapa').setView([-12.083759, -77.061169], 16);
@@ -21,6 +29,9 @@ const precioCuidado=20;
         .openPopup();
         //.bindTooltip('Un tootltip')
         //.openTooltip();
+    }
+    if(resaltar!=undefined){
+        resaltar.classList.add('activo');    
     }
         
     //CAMPOS DATOS DEL USUARIO
@@ -39,7 +50,7 @@ const precioCuidado=20;
     const blanqueamiento=document.getElementById('blanqueamiento');
     const cuidado=document.getElementById('cuidado');
 
-
+    
 
     //RESULTADO
     const calcular=document.getElementById('calcular');
@@ -177,9 +188,13 @@ const precioCuidado=20;
             element.classList.add("ocultar");
         });
     }
-
     }); //DOM CONTENT LOADES
+    //colorbox
+    $('.dentista-info').colorbox({inline:true,width:"60%"});
 
 })()
+
+
+
 
 
