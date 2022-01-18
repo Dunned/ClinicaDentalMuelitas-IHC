@@ -244,10 +244,10 @@ mouse over your Pinned Site's icon.
 If the site should go to a specific URL when it is pinned (such as the
 homepage), enter it here. One idea is to send it to a special URL so you can
 track the number of pinned users, like so:
-`https://www.example.com/index.html?pinned=true`
+`https://www.example.com/index.php?pinned=true`
 
 ```html
-<meta name="msapplication-starturl" content="https://www.example.com/index.html?pinned=true">
+<meta name="msapplication-starturl" content="https://www.example.com/index.php?pinned=true">
 ```
 
 ### Recolor IE's controls manually for a Pinned Site

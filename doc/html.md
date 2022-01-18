@@ -5,12 +5,12 @@ table of contents](TOC.md)
 
 By default, HTML5 Boilerplate provides two `html` pages:
 
-* [`index.html`](#indexhtml) - a default HTML skeleton that should form the
+* [`index.php`](#indexhtml) - a default HTML skeleton that should form the
   basis of all pages on your website
 * `404.html` - a placeholder 404 error page
 
 
-## `index.html`
+## `index.php`
 
 
 ### The `no-js` Class

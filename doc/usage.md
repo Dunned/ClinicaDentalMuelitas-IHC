@@ -47,7 +47,7 @@ A basic HTML5 Boilerplate site initially looks something like this:
 ├── favicon.ico
 ├── humans.txt
 ├── icon.png
-├── index.html
+├── index.php
 ├── robots.txt
 ├── site.webmanifest
 ├── tile.png
@@ -100,7 +100,7 @@ The `.editorconfig` file is provided in order to encourage and help you and
 your team to maintain consistent coding styles between different
 editors and IDEs. [Read more about the `.editorconfig` file](misc.md#editorconfig).
 
-### index.html
+### index.php
 
 This is the default HTML skeleton that should form the basis of all pages on
 your site. If you are using a server-side templating framework, then you will
