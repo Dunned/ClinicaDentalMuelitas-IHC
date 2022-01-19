@@ -17,10 +17,22 @@
       <div class="contenedor">
         <div class="programa-evento">
           <h2>Algunas Especialidades</h2>
+
+          <?php
+              try {
+              require 'includes/funciones/bd_conexion.php';
+              $sql="SELECT * FROM especialidades";
+              $resultado=$conn->query($sql);
+              } catch (\Exception $e) {
+              echo $e->getMessage();
+              }
+          ?>
+
+
           <nav class="menu-programa">
-            <a href="#Especialidad1"><i class="fas fa-stethoscope"></i> Especialidad 2</a>
-            <a href="#Especialidad2"><i class="fas fa-book"></i> Especialidad 2</a>
-            <a href="#Especialidad3"><i class="fas fa-notes-medical"></i> Especialidad 3</a>
+            <?php while($esp=$resultado->fetch_assoc()){ ?>
+              <a href="#Especialidad<?php echo $esp['id_especialidad']?>"><i class="fa <?php echo $esp['icono_especialidad'];?>"></i> <?php echo $esp['nombre_especialidad']?> </a>
+            <?php }; ?>
           </nav>
 
           <div id="Especialidad1" class="info-especialidad  clearfix"> 
@@ -36,9 +48,11 @@
               <p><i class="fas fa-level-up-alt"></i> Alta</p>
               <p><i class="fas fa-user-md"></i> Eduardo Jauregui Romero</p>
             </div>
-            <a href="" class="button float-right">Ver Todos</a>
+            <a href="/servicios.php" class="button float-right">Ver Todos</a>
           </div> <!--#ESPECIALIDAD1-->
+     
         </div> <!--PROGRAMA EVENTO-->
+
       </div> <!--CONTENEDOR-->
     </div> <!--CONTENIDO DEL PROGRAMA-->
   </section> <!--PROGRAMA-->
@@ -102,7 +116,7 @@
 
 
   <div id="mapa" class="mapa">
-
+              
   </div>
 
   <section class="seccion">

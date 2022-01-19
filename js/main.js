@@ -11,9 +11,24 @@ var rutaAbsoluta = self.location.href;
 var posicionUltimaBarra = rutaAbsoluta.lastIndexOf("/");
 var rutaRelativa = rutaAbsoluta.substring( posicionUltimaBarra + "/".length , rutaAbsoluta.length );
 rutaRelativa=rutaRelativa.replace('.php','');
-//
-const resaltar=document.querySelector('.'+rutaRelativa).querySelector('.menu-'+rutaRelativa);
 
+
+if (rutaRelativa==="nosotros") {
+    const resaltar=document.querySelector('.'+rutaRelativa).querySelector('.menu-'+rutaRelativa);  
+    resaltar.classList.add('activo');   
+}
+else{
+    if (rutaRelativa==="dentistas") {
+        const resaltar=document.querySelector('.'+rutaRelativa).querySelector('.menu-'+rutaRelativa);  
+        resaltar.classList.add('activo');   
+    }   
+    else{
+        if (rutaRelativa==="servicios") {
+            const resaltar=document.querySelector('.'+rutaRelativa).querySelector('.menu-'+rutaRelativa);   
+            resaltar.classList.add('activo');  
+        }
+    }
+}
 
 (function(){ //SOLO SE EJECUTE UNA VEZ
     'use strict';
@@ -30,10 +45,7 @@ const resaltar=document.querySelector('.'+rutaRelativa).querySelector('.menu-'+r
         //.bindTooltip('Un tootltip')
         //.openTooltip();
     }
-    if(resaltar!=undefined){
-        resaltar.classList.add('activo');    
-    }
-        
+
     //CAMPOS DATOS DEL USUARIO
     const nombre=document.getElementById('nombre');
     const apellido=document.getElementById('apellido');
@@ -58,6 +70,9 @@ const resaltar=document.querySelector('.'+rutaRelativa).querySelector('.menu-'+r
     const botonRegistro=document.getElementById('btnRegistro');
     const lista_productos=document.getElementById('lista-productos');
     const suma=document.getElementById('suma-total');
+    const hidden=document.getElementById('tipo_cita')
+
+    botonRegistro.style.visibility = 'hidden';
 
     
     online.addEventListener('click',seleccionOnline);
@@ -109,6 +124,7 @@ const resaltar=document.querySelector('.'+rutaRelativa).querySelector('.menu-'+r
             contDoc.classList.remove("ocultar");
             contDoc.classList.add("mostrar");
         }
+        hidden.value='online';
         online.classList.toggle('seleccionado');
         presencial.classList.remove('seleccionado');
         ocultarHorarios();
@@ -129,13 +145,12 @@ const resaltar=document.querySelector('.'+rutaRelativa).querySelector('.menu-'+r
             contDoc.classList.remove("ocultar");
             contDoc.classList.add("mostrar");
         }
+        hidden.value='presencial';
         presencial.classList.toggle('seleccionado');
         online.classList.remove('seleccionado');
         ocultarHorarios();
         mostrarHorarios("presencial");
     }
-
-
 
     function calcularMontos(event) {
         if (op!=0) {
@@ -166,6 +181,8 @@ const resaltar=document.querySelector('.'+rutaRelativa).querySelector('.menu-'+r
             });
             suma.classList.add("agregueTotal");
             suma.innerHTML="S/."+totalPago;    
+            botonRegistro.style.visibility = 'visible';
+            document.getElementById('total_pedido').value=totalPago;
         }
         else{
             alert("ESCOGE UNA ONLINE O PRESENCIAL");

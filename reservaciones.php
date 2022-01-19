@@ -3,7 +3,7 @@
   <section class="seccion contenedor">
     <h2>Registro de Citas</h2>
 
-    <form id="registro" class="registro" action="index.php" method="post">
+    <form id="registro" class="registro" action="pagar.php" method="POST">
         <div id="datos_usuario" class="registro registro-campos">
             <div class="campo">
                 <label for="nombre">Nombre:</label>
@@ -17,9 +17,6 @@
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Tu Email">
             </div>
-
-            
-
         </div> <!--DATOS DEL USUARIO FIN-->
         <div id="error"></div>
 
@@ -34,9 +31,12 @@
                     <li>Opcion1</li>
                     <li>Opcion2</li>
                   </ul>
-                  <a id="online" href="#" class="button verde">Reservar</a>
+                  <a id="online" href="#" class="button verde">
+                    Reservar</a>
                 </div>
-    
+
+                <input id="tipo_cita" type="hidden" name="tipo">  
+
                 <div class="tabla-precio">
                   <h3 class="titulo-precio">Consulta Presencial</h3>
                   <p class="numero numero-precio">S/50</p>
@@ -44,7 +44,8 @@
                     <li>Opcion1</li>
                     <li>Opcion2</li>
                   </ul>
-                  <a id="presencial" href="#" class="button verde">Reservar</a>
+                  <a id="presencial" href="#" class="button verde">
+                    Reservar</a>
                 </div>
     
             </div>
@@ -104,11 +105,11 @@
                   <div class="contenedor-orden">
                     <div class="orden">
                       <label for="blanqueamiento">Servicio de blanqueamiento Dental Basico (S/.50.00)</label>
-                      <input type="checkbox" name="extra" id="blanqueamiento" value="blanqueamiento">
+                      <input type="checkbox" name="extra1" id="blanqueamiento" value="blanqueamiento">
                   </div>
                     <div class="orden">
                         <label for="blanqueamiento">KIT DE CUIDADO DENTAL (PASTA DIENTES + ENJUAGUE) (S/20.00)</label>
-                        <input type="checkbox" name="extra" id="cuidado" value="cuidado">
+                        <input type="checkbox" name="extra2" id="cuidado" value="cuidado">
                     </div>
                   </div>
                     <input type="button" id="calcular" class="button" value="Calcular">
@@ -121,8 +122,8 @@
                     <p>Total</p>
                     <div id="suma-total">
                     </div>
-                    
-                    <input type="submit" id="btnRegistro" class="button" value="Pagar">
+                    <input type="hidden" name="total_pedido" id="total_pedido" value="total_pedido">
+                    <input type="submit" id="btnRegistro" class="button" name="submit" value="Pagar">
                 </div>
             </div>
           </div>
