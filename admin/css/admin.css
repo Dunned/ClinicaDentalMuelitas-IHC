@@ -1,0 +1,97 @@
+:root{
+    --verdeAqua: #4CECA9;
+    --verdeAqua2: #46D096;
+    --negro: #000;
+    --barraMarron:#494545;
+    --colorNaranja: #F37945;
+}
+
+.skin-blue .main-header .navbar{
+    background-color: var(--verdeAqua);
+    color: var(--negro);
+    font-weight: 800;
+}
+
+.skin-blue .main-header .logo{
+    background-color: var(--verdeAqua2);
+    color: var(--negro);
+    font-weight: 800;
+}
+
+
+.skin-blue .main-header .navbar .nav>li>a,.skin-blue .main-header .navbar .nav>li>a:hover, .skin-blue .main-header .navbar .nav>li>a:active, .skin-blue .main-header .navbar .nav>li>a:focus, .skin-blue .main-header .navbar .nav .open>a, .skin-blue .main-header .navbar .nav .open>a:hover, .skin-blue .main-header .navbar .nav .open>a:focus, .skin-blue .main-header .navbar .nav>.active>a{
+    color: var(--negro);  
+    font-size: 1.8rem;
+}
+
+.skin-blue .main-header .navbar .sidebar-toggle{
+    color: var(--negro);
+}
+
+.text-success {
+    color: var(--verdeAqua)
+}
+
+.user-panel{
+    height: 60px;
+}
+
+.user-panel>.info{
+    position: relative;
+    left: auto;
+}
+
+.skin-blue .sidebar-menu>li.header{
+    color: white;
+}
+
+.skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side {
+    background-color: var(--barraMarron);
+}
+
+.skin-blue .sidebar a {
+    color:white;
+}
+
+.skin-blue .sidebar-form input[type="text"], .skin-blue .sidebar-form .btn {
+    background-color: white;
+}
+
+.btn-primary {
+    background-color: var(--verdeAqua);
+    border-color: var(--verdeAqua2);
+    color: var(--negro);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--verdeAqua2);
+    color: var(--negro);
+}
+
+.form-control {
+    border-radius: 0;
+    box-shadow: none;
+    border: 1.5px solid var(--negro);
+}
+
+.login-page .main-footer{
+    display: none;
+}
+
+body.login-page{
+    background-image: url(../img/fondoLogin.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+
+login-box-body, .register-box-body {
+    padding: 10rem;
+}
+
+.content-wrapper{
+    background-color: #EBE7E7;
+}
+
+
