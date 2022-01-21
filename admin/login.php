@@ -16,7 +16,7 @@
   <div class="login-box-body">
     <p class="login-box-msg">Iniciar Sesion Aquí</p>
     
-    <form role="form" name="login-admin-form" id="login-admin" method="POST" action="modelo-admin.php"> 
+    <form role="form" name="login-admin-form" id="login-admin" method="POST" action="login-admin.php"> 
         <div class="form-group has-feedback">
             <input type="text" class="form-control" name="usuario" placeholder="Usuario">
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
@@ -32,6 +32,9 @@
             </div>
         </div>
     </form>
+     <div class="text-center">
+            <a href="/index.php" class="link-vista-cliente">Volver Vista Cliente</a>
+    </div>
   </div>
   <!-- /.login-box-body -->
 </div>

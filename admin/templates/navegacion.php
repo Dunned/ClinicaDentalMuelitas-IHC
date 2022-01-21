@@ -6,7 +6,7 @@
 
       <div class="user-panel">
         <div class="info">
-          <p>Eduardo Jauregui</p>
+          <p><?php echo $_SESSION['nombre'];?></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -94,7 +94,8 @@
           </ul>
         </li>
 
-        <li class="treeview">
+        <?php if ($_SESSION['rol']==1) {?>
+          <li class="treeview">
           <a href="#">
             <i class="fa fa-user-circle-o"></i>
             <span>Administradores</span>
@@ -103,8 +104,8 @@
             <li><a href="lista-admin.php"><i class="fa fa-list"></i> Ver todos</a></li>
             <li><a href="crear-admin.php"><i class="fa fa-plus-square"></i> Agregar</a></li>
           </ul>
-        </li>
-        
+        </li>        
+      <?php } ?>
       </ul>
     </section>
     <!-- /.sidebar -->

@@ -1,5 +1,6 @@
 <?php 
        require 'funciones/sesiones.php'; //verificar session
+       require 'funciones/funcionAdmin.php';
        require 'funciones/funciones.php'; 
        include 'templates/header.php'; 
        include 'templates/barra.php'; 
@@ -52,7 +53,7 @@
                                 <td><?php  echo $admin['nombre'];?></td>
                                 <td>
 
-                                  <a href="editar-admin.php?id=<?php echo $admin['id_admin']; ?>"
+                                  <a href="editar-admin.php?id=<?php  echo $admin['id_admin']; ?>"
                                   class="btn bg-orange btn-flat margin">
                                   <i class="fa fa-pencil"></i></a>
 

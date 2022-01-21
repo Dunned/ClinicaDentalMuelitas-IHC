@@ -1535,6 +1535,15 @@ div.foto-galeria img{
   background-color: red;
 }
 
+a.link-admin{
+  display: block !important;
+  text-align: center !important;
+  font-size: 2rem;
+  color: var(--colorNaranja);
+  font-weight: bold;
+  text-decoration: none;
+}
+
 
 
 

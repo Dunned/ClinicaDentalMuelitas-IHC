@@ -34,7 +34,10 @@
       </div>
     </div>
 
-    <p class="derechos">TODOS LOS DERECHOS &#169 RESERVADOS CLINICA DENTAL MUELITAS 2022</p>
+    <p class="derechos">
+      TODOS LOS DERECHOS &#169 RESERVADOS CLINICA DENTAL MUELITAS 2022
+    </p>
+    <a href="admin/login.php" class="link-admin">Modo Administrador</a>
 
   </footer>
 
